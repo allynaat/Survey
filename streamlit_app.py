@@ -17,13 +17,11 @@ Q3 = survey.radio("3. How long have you been involved with the compliance proces
 
 Q4 = survey.radio("4. Which best describes your role?", options=["Research-active academic", "Research office staff member", "Research office manager"], horizontal=False, id="Q4")
 if Q4 == "Research-active academic":
-
-   
-Q5 = survey.select_slider(
-    "5. How easy is the current submission process?", options=["Very Difficult", "Difficult", "Neutral", "Easy", "Very Easy"], id="Q5"
-)
-
-Q6 = survey.radio("6. What activities currently consume the most time?", options=["Sending reminders", "Tracking submissions", "Following up missing information", "Validating submissions", "Producing reports", "Managing spreadsheets", "Other"], horizontal=False, id="Q6")   
-if Q6 == "Other":
-    Q6_other = survey.text_input("Please specify other activities:", placeholder="Enter other activities here", id="Q6_other")
+    Q5 = survey.select_slider(
+        "5. How easy is the current submission process?", options=["Very Difficult", "Difficult", "Neutral", "Easy", "Very Easy"], id="Q5"
+    )
+else:
+    Q6 = survey.radio("6. What activities currently consume the most time?", options=["Sending reminders", "Tracking submissions", "Following up missing information", "Validating submissions", "Producing reports", "Managing spreadsheets", "Other"], horizontal=False, id="Q6")   
+    if Q6 == "Other":
+        Q6_other = survey.text_input("Please specify other activities:", placeholder="Enter other activities here", id="Q6_other")
 

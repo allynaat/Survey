@@ -5,7 +5,7 @@ st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 
-survey = ss.StreamlitSurvey()
+survey = st.StreamlitSurvey()
 survey.select_slider(
     "Likert scale:", options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], id="Q2"
 )

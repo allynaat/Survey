@@ -2,13 +2,11 @@ import streamlit as st
 from streamlit_survey import Survey
 
 
-survey = Survey()
+survey = Survey("Alina's survey")
 
-st.title("🎈Alina's app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# Add questions
+name = survey.text_input("What is your name?")
+rating = survey.radio("How would you rate our service?", options=["Excellent", "Good", "Average", "Poor"])
+comments = survey.text_area("Any additional comments?")
 
-survey.select_slider(
-    "Likert scale:", options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], id="Q2"
-)
+

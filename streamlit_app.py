@@ -84,11 +84,36 @@ elif st.session_state.page == 3:
             index=None,
             horizontal=False
             )
-        
+        survey.multiselect(
+            "7. Which features would be most useful in a new system? (Select up to 3 options)",
+            options=[
+                "Mobile-friendly design",
+                "Dashboard showing submission status",
+                "Access previous submissions",
+                "Save progress and continue later",
+                "Help and guidance",
+                "Submissions confirmation",
+                "Automated reminders"
+                "Other"
+            ],
+            id="Q7"
+        )
+        survey.select_slider(
+            "8. How useful would a centralised online system be for managing research compliance submissions?",
+            options=[
+                "Not useful",
+                "Somewhat useful",
+                "Neutral",
+                "Useful",
+                "Very useful"
+            ],
+            id="Q8"
+        )
 
 else:
 
-        st.header("Research office staff member / Research office manager")
+        st.header("Questions for Research office managers and staff")
+        st.write("You have selected the role of Research office managers and staff. Please answer the following questions based on your experience in this role.")
 
         Q6 = survey.radio(
             "6. What activities currently consume the most time?",

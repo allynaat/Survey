@@ -15,20 +15,19 @@ if st.session_state.page == 1:
 
         st.title("Informal Interactions Survey")
             
-        with st.container():   
-            st.info("""
+        st.markdown("""
 
-            Help us understand how research compliance information is currently collected and managed:
+        Help us understand how research compliance information is currently collected and managed:
 
-            • Takes around 10 minutes.
+        • Takes around 10 minutes.
 
-            • Responses are confidential.
+        • Responses are confidential.
 
-            • Participation is voluntary.
+        • Participation is voluntary.
 
-            Your feedback will help inform the design of a future digital solution.
+        Your feedback will help inform the design of a future digital solution.
 
-            """)
+        """)
 
         st.success("Ready to begin?")    
 

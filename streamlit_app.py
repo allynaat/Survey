@@ -136,14 +136,14 @@ elif st.session_state.page == 3:
                 id="Q6_other"
             )
 
-        col1, col2 = st.columns(2)
+     col1, col2 = st.columns(2)
 
-        with col1:
-                if st.button("Back"):
+     with col1:
+        if st.button("Back"):
                     st.session_state.page = 2
                     st.rerun()
 
-        with col2:
-                if st.button("Next"):
+     with col2:
+        if st.button("Next"):
                     st.session_state.page = 4
                     st.rerun()# Add questions specific to Research-active academic here       

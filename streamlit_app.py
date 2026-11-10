@@ -28,9 +28,14 @@ if st.session_state.page == 1:
 
         st.success("Ready to begin?")    
 
-        if st.button("Start Survey"):
-            st.session_state.page = 2
-            st.rerun()
+        col1, col2, col3 = st.columns([2, 1, 2])
+
+        with col2:
+            if st.button("Start Survey"):
+                st.session_state.page = 2
+                st.rerun()
+
+       
 
 elif st.session_state.page == 2:
     st.header("About you")        

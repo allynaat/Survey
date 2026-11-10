@@ -9,26 +9,32 @@ survey = Survey.StreamlitSurvey()
 
 if st.session_state.page == 1:
 
-    st.title("Informal Interactions Survey")
-        
-    with st.container():   
-        st.info("""
+    col1, col2 = st.columns([1,2,1])
 
-        Help us understand how research compliance information is currently collected and managed.
+    with col2:
 
-        Takes around 10 minutes
+        st.title("Informal Interactions Survey")
+            
+        with st.container():   
+            st.info("""
 
-        Responses are confidential
+            Help us understand how research compliance information is currently collected and managed:
 
-        Participation is voluntary
+            • Takes around 10 minutes.
 
-        Your feedback will help inform the design of a future digital solution
+            • Responses are confidential.
 
-        """)
+            • Participation is voluntary.
 
-    if st.button("Start Survey"):
-        st.session_state.page = 2
-        st.experimental_rerun()
+            Your feedback will help inform the design of a future digital solution.
+
+            """)
+
+        st.success("Ready to begin?")    
+
+        if st.button("Start Survey"):
+            st.session_state.page = 2
+            st.experimental_rerun()
 
 elif st.session_state.page == 2:
     st.header("About you")        

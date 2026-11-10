@@ -110,7 +110,7 @@ elif st.session_state.page == 3:
             id="Q8"
         )
 
-else:
+     else:
 
         st.header("Questions for Research office managers and staff")
         st.write("You have selected the role of Research office managers and staff. Please answer the following questions based on your experience in this role.")

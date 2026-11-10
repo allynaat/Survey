@@ -96,7 +96,8 @@ elif st.session_state.page == 3:
                 "Automated reminders"
                 "Other" 
             ],
-            id="Q7"
+            id="Q7",
+            max_selections=3
             )
         
                 
@@ -138,14 +139,48 @@ elif st.session_state.page == 3:
                 id="Q6_other"
             )
 
+        survey.select_slider(
+            "7. How often do you encounter incomplete or inaccurate submissions?",
+            options=[
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            id="Q7"
+        )    
+
+        survey.multiselect(
+            "8. Which reporting features would be most valuable? (Select up to 3 options)",
+            options=[
+                "Historical reporting",
+                "Dashboard reporting",
+                "Automated report generation",
+                "Export to Excel",
+                "Missing submission alerts",
+                "Submissions confirmation",
+                "real-time compliance monitoring",
+            ],
+            id="Q8-1",
+            max_selections=3
+        )
+        if "Other" in survey.get_answer("Q8-1"):
+            survey.text_input(
+                "Please specify other reporting features:",
+                id="Q8-1_other"
+            )
+
      col1, col2 = st.columns(2)
 
      with col1:
         if st.button("Back"):
-                    st.session_state.page = 2
-                    st.rerun()
+            st.session_state.page = 2
+            st.rerun()
 
      with col2:
         if st.button("Next"):
-                    st.session_state.page = 4
-                    st.rerun()# Add questions specific to Research-active academic here       
+            st.session_state.page = 4
+            st.rerun()
+     
+   

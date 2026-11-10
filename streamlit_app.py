@@ -94,7 +94,7 @@ elif st.session_state.page == 3:
                 "Help and guidance",
                 "Submissions confirmation",
                 "Automated reminders"
-                "Other"
+                "Other" 
             ],
             id="Q7"
         )

@@ -9,7 +9,7 @@ survey = Survey.StreamlitSurvey()
 
 if st.session_state.page == 1:
 
-    col1, col2, col3 = st.columns([1,2,1])
+    col1, col2 = st.columns([1,3])
 
     with col2:
 

@@ -9,8 +9,22 @@ survey = Survey.StreamlitSurvey()
 
 if st.session_state.page == 1:
 
-    st.title("Improving how research compliance information is collected")
-    st.write("This survey is part of a university module project. We are exploring how an online system could replace the current form-and-email process for collecting government-required research compliance information. It takes about 10 minutes. Participation is voluntary and your answers are confidential. There are no right or wrong answers. Data will be stored securely, used only for this project and reported in summary form. Where applicable, questions will have an 'Other' option. You will also have the opportunity to add additional comments at the end.When you submit this form, it will not automatically collect your details like name and email address unless you provide it yourself.")
+    st.title("Informal Interactions Survey")
+        
+    with st.container():   
+        st.info("""
+
+        Help us understand how research compliance information is currently collected and managed.
+
+        Takes around 10 minutes
+
+        Responses are confidential
+
+        Participation is voluntary
+
+        Your feedback will help inform the design of a future digital solution
+
+        """)
 
     if st.button("Start Survey"):
         st.session_state.page = 2

@@ -50,6 +50,7 @@ elif st.session_state.page == 2:
     if Q4 is not None:
         if st.button("Next"):
             st.session_state.page = 3
+            st.session_state.role = Q4
             st.rerun() 
 
 

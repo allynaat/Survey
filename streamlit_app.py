@@ -97,23 +97,24 @@ elif st.session_state.page == 3:
                 "Other" 
             ],
             id="Q7"
-        )
-        if RAQ7 == "Other":
-            survey.text_input(
-                "Please specify other features:",
-                id="Q7_other"
             )
+        if RAQ7 == "Other":
+                survey.text_input(
+                    "Please specify other features:",
+                    id="Q7_other"
+                    )
+                
         survey.select_slider(
-            "8. How useful would a centralised online system be for managing research compliance submissions?",
-            options=[
-                "Not useful",
-                "Somewhat useful",
-                "Neutral",
-                "Useful",
-                "Very useful"
-            ],      
-            id="Q8"
-        )
+                "8. How useful would a centralised online system be for managing research compliance submissions?",
+                options=[
+                    "Not useful",
+                    "Somewhat useful",
+                    "Neutral",
+                    "Useful",
+                    "Very useful"
+                ],
+                id="Q8"
+            )
 
      else:
 

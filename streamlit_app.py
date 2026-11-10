@@ -59,7 +59,7 @@ elif st.session_state.page == 3:
      role = st.session_state.role
 
      if role == "Research-active academic":
-        st.header("Research-active academic")
+        st.header("Questions for Research-active academics")
         st.write("You have selected the role of Research-active academic. Please answer the following questions based on your experience in this role.")
         survey.select_slider(
             "5. How easy is the current submission process?",
@@ -72,6 +72,19 @@ elif st.session_state.page == 3:
             ],
             id="Q5"
         )
+        survey.radio(
+            "6. How long does it usually take you to complete a submission?",
+            options=[
+                "Under 5 minutes",
+                "5-10 minutes",
+                "11-20 minutes",
+                "More than 20 minutes"
+            ],
+            id="Q6",
+            index=None,
+            horizontal=False
+            )
+        
 
 else:
 

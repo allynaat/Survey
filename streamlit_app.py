@@ -9,9 +9,6 @@ survey = Survey.StreamlitSurvey()
 
 if st.session_state.page == 1:
 
-    col1, col2 = st.columns([1,3])
-
-    with col2:
 
         st.title("Informal Interactions Survey")
             
@@ -33,7 +30,7 @@ if st.session_state.page == 1:
 
         if st.button("Start Survey"):
             st.session_state.page = 2
-            st.experimental_rerun()
+            st.rerun()
 
 elif st.session_state.page == 2:
     st.header("About you")        

@@ -84,7 +84,7 @@ elif st.session_state.page == 3:
             index=None,
             horizontal=False
             )
-        survey.multiselect(
+        RAQ7 = survey.multiselect(
             "7. Which features would be most useful in a new system? (Select up to 3 options)",
             options=[
                 "Mobile-friendly design",
@@ -98,6 +98,11 @@ elif st.session_state.page == 3:
             ],
             id="Q7"
         )
+        if RAQ7 == "Other":
+            survey.text_input(
+                "Please specify other features:",
+                id="Q7_other"
+            )
         survey.select_slider(
             "8. How useful would a centralised online system be for managing research compliance submissions?",
             options=[
